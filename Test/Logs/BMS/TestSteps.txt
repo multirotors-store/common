@@ -1,0 +1,13 @@
+Precondition:
+    - Connect the FMU-V5x to the PC via USB
+    - Connect the Zubax Babel to the PC via USB and to the FMU-V5x via CAN1 port
+    - Connect the BMS module to the CAN bus and power up the BMS with a 6s battery
+    - Open the Yukon app, start the transport by choosing the CAN -> SLCAN -> Babel COM port
+    - Open the QGroundControl app and wait for the FMU has connected
+Test Step:
+    - Step 1: In the Yukon's Monitor tab, right click on the space and choose "Add a subscriber".
+              Set the topic ID is 4097 and the data type is reg.udral.service.battery.Status.
+    - Step 2: Observe Yukon to verify data on this topic
+    - Step 3: Subscribe topic ID 4098 and the data type is reg.udral.service.battery.Parameters.
+    - Step 4: Observe Yukon to verify data on this topic
+    - Step 5: In the QGroundControl app, on the main page, click on the second battery and observe the battery parameters.

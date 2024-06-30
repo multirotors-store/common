@@ -1,0 +1,12 @@
+Precondition:
+    - Connect the FMU-V5x to the PC via USB
+    - Connect the Zubax Babel to the PC via USB and to the FMU-V5x via CAN1 port
+    - Connect the ESC module to the CAN bus and to the PC via USB port
+    - Connect the GPS module to the CAN bus
+    - Connect the CAN hub module to the CAN bus and to the PC by connect the USB-TTL
+    - Open the Putty app and open the USB-TTL COM port
+Test Step:
+    - Step 1: In the Putty app, type "ifup can0" and then Enter.
+    - Step 2: Observe the tool to verify whether the CAN bus is up.
+    - Step 3: In the Putty app, type "candump can0" and then Enter.
+    - Step 4: Observe the tool to verify the module can dump data on CAN bus.

@@ -1,0 +1,17 @@
+
+uavcan.pub.udral.esc.0.id: 2342
+uavcan.sub.udral.baro.pressure.0.id: 2404
+uavcan.sub.udral.baro.temperature.0.id: 2403
+uavcan.sub.udral.battery_parameters.0.id: 2702
+uavcan.sub.udral.battery_status.0.id: 2701
+uavcan.sub.udral.energy_source.0.id: 2700
+uavcan.sub.udral.gps.0.id: 2406
+uavcan.sub.udral.gps.pdop.0.id: 2409
+uavcan.sub.udral.gps.sats.0.id: 2407
+uavcan.sub.udral.gps.status.0.id: 2408
+uavcan.sub.udral.mag.0.id: 2402
+uavcan.sub.uorb.sensor_gps.0.id: 2502
+uavcan.sub.zubax.feedback.0.id: 2500
+uavcan.sub.zubax.feedback.1.id: 2501
+uavcan.sub.zubax.feedback.2.id: 2502
+uavcan.sub.zubax.feedback.3.id: 2503

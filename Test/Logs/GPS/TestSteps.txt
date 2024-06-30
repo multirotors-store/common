@@ -1,0 +1,13 @@
+Precondition:
+    - Connect the FMU-V5x to the PC via USB
+    - Connect the Zubax Babel to the PC via USB and to the FMU-V5x via CAN1 port
+    - Connect the GPS module to the CAN bus
+    - Open the Yukon app, start the transport by choosing the CAN -> SLCAN -> Babel COM port
+Test Step:
+    - Step 1: In the Yukon's Monitor tab, right click on the space and choose "Add a subscriber".
+              Set the topic ID is 2001 and the data type is uavcan.metatransport.serial.Fragment.0.2
+    - Step 2: Observe Yukon to verify data on this topic
+    - Step 3: Subscribe topic ID 2003 and the data type is reg.udral.physics.kinematics.geodetic.PointStateVarTS
+    - Step 4: Observe Yukon to verify data on this topic
+    - Step 5: In the QGroundControl app, on the main page, verify the app can show the right position on the map.
+    - Step 6: In the QGroundControl app, on the Analyze Tools -> MAVLink Console: type "listener sensor_gps" then Enter, verify the sensor data

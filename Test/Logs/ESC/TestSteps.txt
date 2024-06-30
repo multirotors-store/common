@@ -1,0 +1,22 @@
+Precondition:
+    - Connect the FMU-V5x to the PC via USB
+    - Connect the Zubax Babel to the PC via USB and to the FMU-V5x via CAN1 port
+    - Connect the ESC module to the CAN bus and power up the ESC by connect a switching power or a battery
+    - Open the Yukon app, start the transport by choosing the CAN -> SLCAN -> Babel COM port
+    - Open the QGroundControl app and wait for the FMU has connected
+Test Step:
+    - Step 1: In the Yukon's Monitor tab, right click on the space and choose "Add a subscriber".
+              Set the topic ID is 111 and the data type is reg.udral.service.actuator.common.sp.Vector31
+    - Step 2: Observe Yukon to verify data on these fields: value[0], value[1], value[2], value[3] equal to 0
+    - Step 3: Subscribe topic ID 112 and the data type is reg.udral.service.common.Readiness.0.1
+    - Step 4: Observe Yukon to verify the value field = 0
+    - Step 5: In the QGroundControl app, on Vehicle setup -> Actuator -> Actuator Testing: Enable sliders and pull up All Motors
+    - Step 6: Observe Yukon to verify data changes for the above topics:
+              Topic 111: value[0], value[1], value[2], value[3] more than 0
+              Topic 112: value = 3
+    - Step 7: Observe the motors to verify whether they spinning up
+    - Step 8: In the QGroundControl app, Pull down All Motors to the bottom
+    - Step 9: Observe Yukon to verify data changes for the above topics:
+              Topic 111: value[0], value[1], value[2], value[3] equal to 0
+              Topic 112: value = 0
+    - Step 10: Observe the motors to verify whether they stop spinning

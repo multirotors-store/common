@@ -1,0 +1,19 @@
+uavcan.node.id: 122
+# Motor parameters. The motor used here is T-Motor MN5212 KV340. MN5212 IP35 Navigator Type UAV Multi-Motor KV340
+drive.runner.0_ramp.velocity_stall_spinup: [15, 40]
+motor.current_max:                        20            # Max current at 24V is 30A
+motor.mechanical_ratio:                   12            # The rotor has 24 poles and there is no gearbox, hence 12.
+# Cyphal/CAN parameters.
+uavcan.can.count:                         1             # In this setup we are not using CAN2.
+# Cyphal ports.
+uavcan.sub.setpoint_rat_torque.id:        111
+uavcan.sub.readiness.id:                  112
+uavcan.pub.dq.id:                         1001
+uavcan.pub.dynamics.id:                   1002
+uavcan.pub.power.id:                      1003
+uavcan.pub.temperature.id:                1004
+
+mns.setpoint_index:                       0
+mns.deadman_timeout:                      1             # 1 sec 
+# General parameters.
+sys.debug:                                false         # Debug interfaces shall be disabled in production use.

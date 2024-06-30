@@ -1,0 +1,49 @@
+drive.current_brake_pu: 0.7
+drive.flux_weakening.bemf_pid: [4.0, 2.0, 0.009999999776482582]
+drive.flux_weakening.voltage_boost: 1.2
+drive.observer.0_ekf.proc_noise: [1000000.0, 3000000.0, 100000000.0]
+drive.observer.0_ekf.sched_factor: [0.800000011920929, 0.949999988079071]
+drive.observer.1_mras.gain: 1000.0
+drive.observer.type: 0
+drive.pre_calibrate: false
+drive.runner.0_ramp.spinup_current_pu: [0.3, 0.2]
+drive.runner.0_ramp.spinup_duration: [0.1, 0.4, 0.4, 0.002, 0.1, 0.6]
+drive.runner.0_ramp.velocity_stall_spinup: [5.0, 12.0]
+drive.runner.type: 0
+drive.stall_limit: 20
+drive.velocity_ctl.2_indi.acceleration_pi: [30.0, 0.0]
+drive.velocity_ctl.2_indi.mass: 7.e-05
+drive.velocity_ctl.acceleration: [-1200.0, 1200.0]
+drive.velocity_ctl.type: 2
+
+drive.voltage_clipping: false
+mns.deadman_timeout: 0.5
+mns.local_timestamp: false
+mns.pub_interval_min: 0.05
+mns.ratiometric_setpoint_min: 0.0
+mns.ratiometric_to_absolute_mul: 0.0
+mns.setpoint_index: 2
+mns.status_period: 1.0
+
+motor.current_max: 40
+motor.current_ramp: 5000
+motor.mechanical_ratio: 6
+motor.voltage_ramp: 20
+
+
+uavcan.sub.setpoint_dynamics.id: 65535
+uavcan.sub.setpoint_dynamics.type: zubax.physics.dynamics.DoF3rd.1.0
+uavcan.sub.setpoint_rat_torque.id: 111
+uavcan.sub.setpoint_rat_torque.type: zubax.primitive.real16.Vector31.1.0
+uavcan.sub.setpoint_rat_torque_u9.id: 65535
+uavcan.sub.setpoint_rat_torque_u9.type: zubax.primitive.natural9.Vector56.1.0
+uavcan.sub.setpoint_rat_velocity_u9.id: 65535
+uavcan.sub.setpoint_rat_velocity_u9.type: zubax.primitive.natural9.Vector56.1.0
+uavcan.sub.setpoint_rat_voltage.id: 65535
+uavcan.sub.setpoint_rat_voltage.type: zubax.primitive.real16.Vector31.1.0
+uavcan.sub.setpoint_rat_voltage_u9.id: 65535
+uavcan.sub.setpoint_rat_voltage_u9.type: zubax.primitive.natural9.Vector56.1.0
+uavcan.sub.setpoint_servo.id: 65535
+uavcan.sub.setpoint_servo.type: zubax.telega.ServoCommand.1.0
+uavcan.sub.setpoint_velocity.id: 65535
+uavcan.sub.setpoint_velocity.type: zubax.primitive.real16.Vector31.1.0

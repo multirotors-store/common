@@ -1,0 +1,7 @@
+Precondition:
+    - Connect the FMU-V5x to the PC via USB
+    - Connect the Zubax Babel to the PC via USB and to the FMU-V5x via CAN1 port
+    - Open the Yukon app, start the transport by choosing the CAN -> SLCAN -> Babel COM port
+Test Step:
+    - Step 1: In the Yukon's Monitor tab, right click on the space and choose "Add a subscriber". Set the topic ID is 123 and the data type is uavcan.si.unit.angle.Quaternion
+    - Step 2: Observe the tool to verify whether the data can be received.

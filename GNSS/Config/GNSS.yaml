@@ -1,0 +1,10 @@
+uavcan.node.id: 50
+uavcan.pub.gps.ubx_tx.id: 2001
+uavcan.sub.gps.ubx_rx.id: 2002
+uavcan.pub.zubax.mag.id: 2402
+uavcan.pub.zubax.baro.temp.id: 2403
+uavcan.pub.zubax.baro.press.id: 2404
+uavcan.pub.zubax.gps.pdop.id: 2409
+uavcan.pub.zubax.gps.point.id: 2406
+uavcan.pub.zubax.gps.sats.id: 2407
+uavcan.pub.zubax.gps.status.id: 2408
